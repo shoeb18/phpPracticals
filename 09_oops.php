@@ -17,7 +17,22 @@
         }
     }
 
+    class Programmer extends employee{
+        private $lang = "php";
+
+        function __construct($language)
+        {
+            $this->lang=$language;
+        }
+        function display(){
+            echo "The language is : $this->lang";
+        }
+    }
+
     $gaurya = new employee("gauri", 100000);
     $gaurya->employeeDetails();
+
+    $shoeb = new Programmer("python");
+    $shoeb->display();
     
 ?>
